@@ -1,2 +1,2 @@
-# qt_git
-just for testing communicatoin between qt and git
+# Leetcoding with QT
+Here i'm sharing solutions of daily coding tests from leetcode website.
