@@ -24,7 +24,8 @@ void printInorder(struct Node* node)
   if (node==NULL)
     return;
   printInorder(node->left);
-
+  cout<<node->data<<" , ";
+  printInorder(node->right);
 
 
 }
@@ -32,7 +33,14 @@ void printInorder(struct Node* node)
 /* Driver code*/
 int main()
 {
-
+  int y=9;
+  int* ptr = new int;
+  int *p=&y;// dynamically allocate memory for an integer
+  *ptr = 10;
+  // store value 10 in the allocated memory location
+  delete ptr;
+if(*ptr==NULL)
+  cout<<p<<" , "<<&p<<" , "<<*p<<endl;
     struct Node* root = newNode(1);
     root->left = newNode(2);
     root->right = newNode(3);
