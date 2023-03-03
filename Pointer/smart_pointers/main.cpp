@@ -21,14 +21,30 @@ void voidpointer(void *ptr,char a='i'){
   }
 
 }
+void findminmax(int array[],int size,int* min,int* max){
+  for (int i=0;i<size;i++) {
+    if(*(array+i)>*max)
+      *max=*(array+i);
+    if(*(array+i)<*min)
+      *min=*(array+i);
+  }
+
+
+}
 int main(){
 
   int j=1;
   char a='b';
-  printint(&j);
-  printchar(&a);
-printanytype(&j);
-printanytype(&a);
-voidpointer(&j);
+//  int arr[5]={}
+//  printint(&j);
+//  printchar(&a);
+//  printanytype(&j);
+//  printanytype(&a);
+//  voidpointer(&j);
+  int array[5]={1,2,3,6,9};
+  int max=-1,min=10;
+  findminmax(array,5,&min,&max);
+  cout<<"min: "<<min<<"max: "<<max<<endl;
+  cout<<array;
   return 0;
 }
