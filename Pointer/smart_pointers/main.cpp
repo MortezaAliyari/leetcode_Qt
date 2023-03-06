@@ -45,7 +45,8 @@ int main(){
 //  shared_ptr<int> ptr2=ptr1;
 //  cout<<*ptr<<" , "<<*ptr1<<" , "<<*ptr2<<*ptr<<endl;
 {
-    unique_ptr<morteza> ptr=make_unique<morteza>();}{
+    unique_ptr<morteza> ptr=make_unique<morteza>();}
+  {
   shared_ptr<morteza> ptr1=make_shared<morteza>();
   shared_ptr<morteza> ptr2=ptr1;
   cout<<ptr1.get()<<" , "<<ptr2.get()<<endl;}
