@@ -88,21 +88,32 @@ class res2: public res1{
 
 int main(){
   mainresturant::menu men2;
-  int order;
-  cin>>order;
+  int order=2;
+//  cin>>order;
   men2=(mainresturant::menu)order;
-  res1 r2;
-  r2.takeorder(men2);
+//  res1 r2;
+//  r2.takeorder(men2);
 
   res1* l1=new res1();
   res2* l2=new res2();
   mainresturant* main=l1;
   main->takeorder(men2);
-//  delete[] l1,l2;
-  l2->takeorder(men2);
+  cout<<l1<<endl;
 
+  cout<<l1<<endl;
 
+{
+  unique_ptr<res1> l3=make_unique<res1>();
+  shared_ptr<res2> l4=make_shared<res2>();
+  shared_ptr<res2> l5=l4;
+//  cout<<(*l4).takeorder(men2)<<endl;
+//  l2->takeorder(men2);
+  l3->takeorder(men2);
+}
 
+  delete[] l1,l2;// deallocating the memory
+  l1=NULL;
+  l2=NULL;//not pointing any more
 
 
 
